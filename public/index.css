@@ -1,0 +1,12 @@
+footer {
+    background-color: black;
+    color: white;
+}
+
+.tarjeta-contenedor {
+    background-color: rgb(158, 158, 158);
+    border-radius: 4px;
+    color: white;
+    width: 10rem;
+    height: 5rem;
+}
