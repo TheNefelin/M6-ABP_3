@@ -7,6 +7,7 @@ app.listen(3000);
 app.set("view engine", "hbs");
 app.set("views", "./views");
 app.use(express.static("public"));
+app.use(express.static(__dirname + '/uploads'));
 hbs.registerPartials(__dirname + "/views/partials");
 
 app.get("/", (req, res) => {
@@ -16,7 +17,7 @@ app.get("/", (req, res) => {
 app.get("/tarjeta", (req, res) => {
     fs.readFile("./data/data.json", (err, dt) => {
         if (err) throw err
-        let data = JSON.parse(dt);
+        const data = JSON.parse(dt);
         const arrData = Object.keys(data).map(key => data[key]);
         console.log(arrData);
         res.render("tarjeta", {arrData});

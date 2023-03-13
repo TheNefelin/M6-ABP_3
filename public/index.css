@@ -13,4 +13,9 @@ footer {
     border-radius: 4px;
     color: white;
     margin: 1rem;
+    text-align: center;
+}
+
+.tarjeta-contenedor img {
+    height: 4rem;
 }
