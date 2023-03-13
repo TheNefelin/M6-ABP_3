@@ -1,4 +1,3 @@
-
 const dt = `{
     "localidad 1": { "Continente": "África", "País": "Angola", "Capital": "Luanda" }, 
     "localidad 2": { "Continente": "América del Norte", "País": "Estados Unidos", "Capital": "Washington DC" },
