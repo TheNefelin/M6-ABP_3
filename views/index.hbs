@@ -1,3 +1,13 @@
-{{#> plantilla}}
-    <button>{{prueba}}</button>
-{{/plantilla}}
+{{#> tarjetaItem}}
+    <section>
+        {{#each arrData}}
+            <div class="tarjeta-contenedor">
+                <img src= {{this.bandera}}>
+                <div>Continente: {{this.Continente}}</div>
+                <div>País: {{this.País}}</div>
+                <div>Capital: {{this.Capital}}</div>
+            </div>
+        {{/each}}
+    </section>
+{{/tarjetaItem}}
+

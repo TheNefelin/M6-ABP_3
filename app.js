@@ -11,15 +11,14 @@ app.use(express.static(__dirname + '/uploads'));
 hbs.registerPartials(__dirname + "/views/partials");
 
 app.get("/", (req, res) => {
-    res.render("index", {prueba: "TARJETAS"});
-});
-
-app.get("/tarjeta", (req, res) => {
     fs.readFile("./data/data.json", (err, dt) => {
         if (err) throw err
         const data = JSON.parse(dt);
         const arrData = Object.keys(data).map(key => data[key]);
-        console.log(arrData);
-        res.render("tarjeta", {arrData});
+        res.render("index", {arrData});
     });
+});
+
+app.get("/tarjeta", (req, res) => {
+    res.render("tarjeta", {prueba: "TARJETAS"});
 });
